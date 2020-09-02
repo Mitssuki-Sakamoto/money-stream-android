@@ -21,7 +21,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:layout_marginTop="10dp"
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
@@ -29,7 +29,7 @@
             android:drawableTop="@drawable/ic_baseline_assignment_24"
             android:text="請求" />
         <Button
-            android:layout_marginTop="10dp"
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
@@ -37,7 +37,6 @@
             android:drawableTop="@drawable/ic_baseline_home_24"
             android:text="ホーム" />
         <Button
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
@@ -45,7 +44,6 @@
             android:drawableTop="@drawable/ic_baseline_history_24"
             android:text="出納履歴" />
         <Button
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
