@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MoneyStream</string>
+    <string name="nominal">名目</string>
+    <string name="amount_of_money">金額</string>
+    <string name="date">日付</string>
+    <string name="time">時刻</string>
 </resources>
