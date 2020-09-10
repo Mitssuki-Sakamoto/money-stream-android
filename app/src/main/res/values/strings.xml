@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">MoneyStream</string>
+
+    <string name="tab_text_1">請求</string>
+    <string name="tab_text_2">ホーム</string>
+    <string name="tab_text_3">出納履歴</string>
+    <string name="tab_text_4">入力</string>
+
+
 </resources>
