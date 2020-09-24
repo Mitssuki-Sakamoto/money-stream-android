@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MoneyStream</string>
+    <string name="meimoku">名目</string>
+    <string name="kingaku">金額</string>
+    <string name="yosankoumoku">予算項目</string>
+    <string name="syukkinnmoto">出金元</string>
 </resources>
