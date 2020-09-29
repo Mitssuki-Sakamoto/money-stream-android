@@ -1,4 +1,4 @@
-package com.example.moneystream
+package com.example.moneystream.tabs
 
 
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.fragment.app.Fragment
+import com.example.moneystream.R
 
 class RequestFragment : Fragment() {
 

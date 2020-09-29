@@ -1,4 +1,4 @@
-package com.example.moneystream
+package com.example.moneystream.tabs
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
