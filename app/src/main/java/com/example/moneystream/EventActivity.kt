@@ -1,6 +1,7 @@
 package com.example.moneystream
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.example.moneystream.tabs.SectionsPagerAdapter
@@ -21,4 +22,5 @@ class EventActivity : AppCompatActivity() {
         val tabs: TabLayout = findViewById(R.id.tabs)
         tabs.setupWithViewPager(viewPager)
     }
+
 }
