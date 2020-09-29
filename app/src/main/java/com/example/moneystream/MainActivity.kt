@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, tmpnames)
         list!!.adapter = adapter
         list.setOnItemClickListener {parent, view, position, id ->
-            onClick(list)
+            onClick(view)
         }
     }
 
