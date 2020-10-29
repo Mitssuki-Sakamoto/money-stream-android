@@ -8,15 +8,21 @@ import android.widget.ArrayAdapter
 import android.widget.ListView
 import com.example.moneystream.R
 import com.example.moneystream.presenters.activities.BaseActivity
+import com.example.moneystream.presenters.fragments.EventListFragment
 
 class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        this.replaceFragment()
     }
 
-    val list = findViewById<ListView>(R.id.listViewEvent) as ListView
-    val tmpnames = arrayListOf<String>("熱海", "沖縄")
+    private fun replaceFragment() {
+        val transaction = supportFragmentManager.beginTransaction()
+        val eventListFragment = EventListFragment()
+        transaction.replace(R.id.event_list_container, eventListFragment)
+        transaction.commit()
+    }
 
 }

@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.*
 import com.example.moneystream.R
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,7 +38,23 @@ class EventListFragment : BaseFragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_event_list, container, false)
+        val fragment = inflater.inflate(R.layout.fragment_event_list, container, false)
+
+        val listView = fragment.findViewById(R.id.event_list_listView) as ListView
+        val dataArray = arrayListOf<String>("熱海", "沖縄", "北海道")
+        val adapter = this.context?.let { ArrayAdapter<String>(it, android.R.layout.simple_list_item_1, dataArray) }
+        listView.adapter = adapter
+        listView.setOnItemClickListener { adapterView, view, position, id ->
+            val text = (view.findViewById<TextView>(android.R.id.text1)).text
+            Toast.makeText(activity, "Clicked: ${text}", Toast.LENGTH_SHORT).show()
+        }
+
+        val fab = fragment.findViewById(R.id.event_list_fab) as FloatingActionButton
+        fab.setOnClickListener { view: View? ->
+            Toast.makeText(activity, "Clicked: fab", Toast.LENGTH_SHORT).show()
+        }
+
+        return fragment
     }
 
     companion object {
