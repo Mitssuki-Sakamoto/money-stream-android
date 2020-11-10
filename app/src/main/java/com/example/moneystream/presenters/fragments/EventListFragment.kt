@@ -1,5 +1,7 @@
 package com.example.moneystream.presenters.fragments
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,7 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.example.moneystream.R
+import com.example.moneystream.presenters.activities.CreateEventActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.lang.RuntimeException
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -47,6 +51,7 @@ class EventListFragment : BaseFragment() {
         listView.setOnItemClickListener { adapterView, view, position, id ->
             val text = (view.findViewById<TextView>(android.R.id.text1)).text
             Toast.makeText(activity, "Clicked: ${text}", Toast.LENGTH_SHORT).show()
+
         }
 
         val fab = fragment.findViewById(R.id.event_list_fab) as FloatingActionButton
@@ -56,7 +61,7 @@ class EventListFragment : BaseFragment() {
 
         return fragment
     }
-
+    
     companion object {
         /**
          * Use this factory method to create a new instance of
