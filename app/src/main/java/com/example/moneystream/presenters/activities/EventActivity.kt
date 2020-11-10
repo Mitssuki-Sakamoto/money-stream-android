@@ -18,6 +18,13 @@ import com.example.moneystream.presenters.fragments.EventHomeFragment
 import com.example.moneystream.presenters.fragments.EventListFragment
 import com.google.android.material.tabs.TabLayout
 
+private val TAB_TITLES = arrayOf(
+    R.string.tab_text_1,
+    R.string.tab_text_2,
+    R.string.tab_text_3,
+    R.string.tab_text_4
+)
+
 class EventActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,17 +36,11 @@ class EventActivity : BaseActivity() {
         val tabs: TabLayout = findViewById(R.id.tabs)
         tabs.setupWithViewPager(viewPager)
     }
-
 }
 
 class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
     : FragmentPagerAdapter(fm) {
-    private val TAB_TITLES = arrayOf(
-        R.string.tab_text_1,
-        R.string.tab_text_2,
-        R.string.tab_text_3,
-        R.string.tab_text_4
-    )
+
     override fun getItem(position: Int): Fragment {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
@@ -103,12 +104,10 @@ class PlaceholderFragment : BaseFragment() {
 }
 
 class PageViewModel : ViewModel() {
-
     private val _index = MutableLiveData<Int>()
     val text: LiveData<String> = Transformations.map(_index) {
         "Hello world from section: $it"
     }
-
     fun setIndex(index: Int) {
         _index.value = index
     }
