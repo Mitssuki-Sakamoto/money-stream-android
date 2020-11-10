@@ -28,6 +28,12 @@ class EventListFragment : BaseFragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private var listener: FragmentListener? = null
+
+    interface FragmentListener {
+        fun onClickFab()
+        fun onClickListItem()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,19 +55,32 @@ class EventListFragment : BaseFragment() {
         val adapter = this.context?.let { ArrayAdapter<String>(it, android.R.layout.simple_list_item_1, dataArray) }
         listView.adapter = adapter
         listView.setOnItemClickListener { adapterView, view, position, id ->
-            val text = (view.findViewById<TextView>(android.R.id.text1)).text
-            Toast.makeText(activity, "Clicked: ${text}", Toast.LENGTH_SHORT).show()
 
+            listener?.let(FragmentListener::onClickListItem)
         }
 
         val fab = fragment.findViewById(R.id.event_list_fab) as FloatingActionButton
         fab.setOnClickListener { view: View? ->
-            Toast.makeText(activity, "Clicked: fab", Toast.LENGTH_SHORT).show()
+            listener?.let(FragmentListener::onClickFab)
         }
 
         return fragment
     }
-    
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is FragmentListener) {
+            listener = context
+        }
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        listener = null
+    }
+
+
+
     companion object {
         /**
          * Use this factory method to create a new instance of
