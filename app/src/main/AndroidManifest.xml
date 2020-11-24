@@ -22,7 +22,8 @@
         <activity android:name=".presenters.activities.EventActivity" />
         <activity android:name=".presenters.activities.MyAccountActivity" />
         <activity android:name=".presenters.activities.UpdateEventActivity" />
-        <activity android:name=".presenters.activities.CreateEventActivity" />
+        <activity android:name=".presenters.activities.CreateEventActivity"
+            android:exported="true"/>
         <activity android:name=".presenters.activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
