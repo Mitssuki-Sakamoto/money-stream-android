@@ -1,12 +1,16 @@
 package com.example.moneystream.presenters.activities
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import android.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
@@ -30,11 +34,21 @@ class EventActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event)
 
+        val toolbar_image: ImageView = findViewById(R.id.toolbar_image_view)
+        toolbar_image.setOnClickListener { view ->
+            onClickDetail()
+        }
+
         val sectionsPagerAdapter = SectionsPagerAdapter(this, supportFragmentManager)
         val viewPager: ViewPager = findViewById(R.id.view_pager)
         viewPager.adapter = sectionsPagerAdapter
         val tabs: TabLayout = findViewById(R.id.tabs)
         tabs.setupWithViewPager(viewPager)
+    }
+    fun onClickDetail() {
+        Toast.makeText(this, "Clicked: Detail", Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, EventDetailActivity::class.java)
+        startActivity(intent)
     }
 }
 

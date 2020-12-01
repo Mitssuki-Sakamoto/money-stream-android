@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" -->
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,14 +15,22 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="@style/AppTheme.AppBarOverlay"
-        >
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@android:drawable/ic_menu_edit"
-            android:foregroundGravity="right"
-            />
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/toolbar_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@android:drawable/ic_menu_edit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:padding="@dimen/appbar_padding"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.viewpager.widget.ViewPager
@@ -39,5 +49,5 @@
 
     </androidx.viewpager.widget.ViewPager>
 
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
+<!--</androidx.coordinatorlayout.widget.CoordinatorLayout> -->
