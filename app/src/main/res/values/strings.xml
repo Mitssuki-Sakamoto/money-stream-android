@@ -8,5 +8,9 @@
     <string name="tab_text_2">ホーム</string>
     <string name="tab_text_3">出納履歴</string>
     <string name="tab_text_4">入力</string>
+
+    <string name="abst_title">概要</string>
+    <string name="date">日程</string>
+    <string name="kanji">幹事</string>
 </resources>
 
