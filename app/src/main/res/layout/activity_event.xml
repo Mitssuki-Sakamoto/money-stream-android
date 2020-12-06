@@ -12,23 +12,33 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/AppTheme.AppBarOverlay">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/toolbar_image_view"
+                android:id="@+id/toolbar_image_myaccount"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:padding="@dimen/appbar_padding"
+                android:scaleType="fitCenter"
+                android:src="@drawable/myaccount"
+                app:layout_constraintEnd_toStartOf="@+id/toolbar_image_detail" />
+
+            <ImageView
+                android:id="@+id/toolbar_image_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="@dimen/appbar_padding"
                 android:src="@android:drawable/ic_menu_edit"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:padding="@dimen/appbar_padding"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.Toolbar>
