@@ -58,7 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:padding="@dimen/appbar_padding"
-            android:src="@drawable/man"
+            android:src="@drawable/invite"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/detail_exit_image"
             app:layout_constraintStart_toEndOf="@+id/detail_member_image"
