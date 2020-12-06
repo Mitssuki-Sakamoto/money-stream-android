@@ -22,6 +22,7 @@ import com.example.moneystream.presenters.fragments.BaseFragment
 import com.example.moneystream.presenters.fragments.EventHomeFragment
 import com.example.moneystream.presenters.fragments.EventListFragment
 import com.google.android.material.tabs.TabLayout
+import kotlinx.android.synthetic.main.activity_event.*
 
 private val TAB_TITLES = arrayOf(
     R.string.tab_text_1,
@@ -37,12 +38,12 @@ class EventActivity : BaseActivity() {
 
         val toolbar_myaccount: ImageView = findViewById(R.id.toolbar_image_myaccount)
         toolbar_myaccount.setOnClickListener { view ->
-            onClickToolBar()
+            onClickToolBar(view)
         }
 
         val toolbar_detail: ImageView = findViewById(R.id.toolbar_image_detail)
         toolbar_detail.setOnClickListener { view ->
-            onClickToolBar()
+            onClickToolBar(view)
         }
 
         val sectionsPagerAdapter = SectionsPagerAdapter(this, supportFragmentManager)
@@ -51,11 +52,20 @@ class EventActivity : BaseActivity() {
         val tabs: TabLayout = findViewById(R.id.tabs)
         tabs.setupWithViewPager(viewPager)
     }
-    fun onClickToolBar() {
+    fun onClickToolBar(view: View) {
+        when(view.id) {
+            R.id.toolbar_image_myaccount -> {
+                Toast.makeText(this, "Clicked: MyAccount", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, MyAccountActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.toolbar_image_detail -> {
+                Toast.makeText(this, "Clicked: Detail", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, EventDetailActivity::class.java)
+                startActivity(intent)
+            }
+        }
 
-        Toast.makeText(this, "Clicked: Detail", Toast.LENGTH_SHORT).show()
-        val intent = Intent(this, EventDetailActivity::class.java)
-        startActivity(intent)
     }
 }
 
