@@ -16,10 +16,7 @@ import androidx.lifecycle.*
 import androidx.viewpager.widget.ViewPager
 import com.example.moneystream.R
 import com.example.moneystream.presenters.fragments.BaseFragment
-import com.example.moneystream.presenters.fragments.EventHomeFragment
-import com.example.moneystream.presenters.fragments.EventListFragment
 import com.google.android.material.tabs.TabLayout
-import kotlinx.android.synthetic.main.activity_event.*
 
 private val TAB_TITLES = arrayOf(
     R.string.tab_text_1,
@@ -33,16 +30,16 @@ class EventActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event)
 
-        val toolbar_myaccount: ImageView = findViewById(R.id.toolbar_image_myaccount)
-        toolbar_myaccount.setOnClickListener { view ->
+        val toolbarMyaccount: ImageView = findViewById(R.id.toolbar_image_myaccount)
+        toolbarMyaccount.setOnClickListener { view ->
             onClickToolBar(view)
         }
 
-        val toolbar_detail: ImageView = findViewById(R.id.toolbar_image_detail)
-        toolbar_detail.setOnClickListener { view ->
+        val toolbarDetail: ImageView = findViewById(R.id.toolbar_image_detail)
+        toolbarDetail.setOnClickListener { view ->
             onClickToolBar(view)
         }
-        
+
         val viewPager: ViewPager = findViewById(R.id.view_pager)
         viewPager.adapter = SectionsPagerAdapter(this, supportFragmentManager)
         val tabs: TabLayout = findViewById(R.id.tabs)
