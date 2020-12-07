@@ -48,7 +48,7 @@
             android:layout_height="match_parent"
             android:layout_marginStart="@dimen/appbar_padding"
             android:padding="@dimen/appbar_padding"
-            android:src="@drawable/member"
+            android:src="@drawable/ic_groups_black_24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -58,7 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:padding="@dimen/appbar_padding"
-            android:src="@drawable/invite"
+            android:src="@drawable/ic_person_black_24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/detail_exit_image"
             app:layout_constraintStart_toEndOf="@+id/detail_member_image"
@@ -70,7 +70,7 @@
             android:layout_height="match_parent"
             android:layout_marginEnd="@dimen/appbar_padding"
             android:padding="@dimen/appbar_padding"
-            android:src="@drawable/quit"
+            android:src="@drawable/ic_sensor_door_black_24dp"
             app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <LinearLayout
