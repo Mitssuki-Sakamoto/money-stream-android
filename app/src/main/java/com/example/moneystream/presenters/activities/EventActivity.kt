@@ -42,10 +42,9 @@ class EventActivity : BaseActivity() {
         toolbar_detail.setOnClickListener { view ->
             onClickToolBar(view)
         }
-
-        val sectionsPagerAdapter = SectionsPagerAdapter(this, supportFragmentManager)
+        
         val viewPager: ViewPager = findViewById(R.id.view_pager)
-        viewPager.adapter = sectionsPagerAdapter
+        viewPager.adapter = SectionsPagerAdapter(this, supportFragmentManager)
         val tabs: TabLayout = findViewById(R.id.tabs)
         tabs.setupWithViewPager(viewPager)
     }
