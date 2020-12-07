@@ -2,8 +2,6 @@ package com.example.moneystream.presenters.activities
 
 import android.content.Context
 import android.content.Intent
-import android.media.Image
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +9,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import android.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
@@ -69,17 +66,12 @@ class EventActivity : BaseActivity() {
             }
         }
     }
-    override fun setTitle(position: Int) {
-
-    }
 }
 
 class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
     : FragmentPagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {
-        // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
         return PlaceholderFragment.newInstance(position + 1)
     }
 
@@ -88,7 +80,6 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
     }
 
     override fun getCount(): Int {
-        // Show 4 total pages.
         return 4
     }
 
