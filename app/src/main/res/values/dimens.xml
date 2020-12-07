@@ -6,7 +6,6 @@
     <dimen name="fab_margin">20dp</dimen>
     <dimen name="fab_diameter">56dp</dimen>
     <dimen name="appbar_padding_top">8dp</dimen>
-    <dimen name="toolbar_height">60dp</dimen><!-- TODO 後で値決める -->
-    <dimen name="toolbar_image_width"></dimen><!-- TODO 後で値決める -->
-    <dimen name="toolbar_image_height"></dimen><!-- TODO 後で値決める -->
+    <dimen name="toolbar_image_width">24dp</dimen>
+    <dimen name="toolbar_image_height">24dp</dimen>
 </resources>
