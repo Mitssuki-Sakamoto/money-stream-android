@@ -29,9 +29,6 @@ private val TAB_TITLES = arrayOf(
 )
 
 class EventActivity : BaseActivity() {
-
-    var page_title: TextView = pageTitle
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event)
