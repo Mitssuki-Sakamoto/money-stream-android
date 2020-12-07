@@ -22,8 +22,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="メンバー"
-                android:textSize="32dp"
+                android:text="@string/title_member"
+                android:textSize="@dimen/toolbar_title"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -32,7 +32,7 @@
                 android:id="@+id/toolbar_image_view"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@android:drawable/ic_menu_edit"
+                android:src="@drawable/ic_edit_black_24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
