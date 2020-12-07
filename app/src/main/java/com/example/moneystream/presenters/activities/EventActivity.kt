@@ -52,7 +52,7 @@ class EventActivity : BaseActivity() {
         val tabs: TabLayout = findViewById(R.id.tabs)
         tabs.setupWithViewPager(viewPager)
     }
-    fun onClickToolBar(view: View) {
+    private fun onClickToolBar(view: View) {
         when(view.id) {
             R.id.toolbar_image_myaccount -> {
                 Toast.makeText(this, "Clicked: MyAccount", Toast.LENGTH_SHORT).show()
