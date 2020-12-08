@@ -14,7 +14,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/toolbar_image_back"
+            android:id="@+id/image_back"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:padding="@dimen/appbar_padding"
@@ -30,21 +30,21 @@
             android:text="        "
             android:textSize="@dimen/toolbar_title"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/toolbar_image_back"
+            app:layout_constraintStart_toEndOf="@+id/image_back"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/toolbar_image_myaccount"
+            android:id="@+id/image_myaccount"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:padding="@dimen/appbar_padding"
             android:src="@drawable/ic_person_black_24dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/toolbar_image_detail"
+            app:layout_constraintEnd_toStartOf="@+id/image_detail"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/toolbar_image_detail"
+            android:id="@+id/image_detail"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:padding="@dimen/appbar_padding"

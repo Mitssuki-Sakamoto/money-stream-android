@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import android.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
@@ -35,12 +34,12 @@ class EventActivity : BaseActivity() {
 
         toolbar_activity_event.pageTitle.text = getString(R.string.event_activity_title)
 
-        val toolbarMyaccount: ImageView = findViewById(R.id.toolbar_image_myaccount)
+        val toolbarMyaccount: ImageView = findViewById(R.id.image_myaccount)
         toolbarMyaccount.setOnClickListener { view ->
             onClickToolBar(view)
         }
 
-        val toolbarDetail: ImageView = findViewById(R.id.toolbar_image_detail)
+        val toolbarDetail: ImageView = findViewById(R.id.image_detail)
         toolbarDetail.setOnClickListener { view ->
             onClickToolBar(view)
         }
@@ -52,12 +51,12 @@ class EventActivity : BaseActivity() {
     }
     private fun onClickToolBar(view: View) {
         when(view.id) {
-            R.id.toolbar_image_myaccount -> {
+            R.id.image_myaccount -> {
                 Toast.makeText(this, "Clicked: MyAccount", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, MyAccountActivity::class.java)
                 startActivity(intent)
             }
-            R.id.toolbar_image_detail -> {
+            R.id.image_detail -> {
                 Toast.makeText(this, "Clicked: Detail", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, EventDetailActivity::class.java)
                 startActivity(intent)
