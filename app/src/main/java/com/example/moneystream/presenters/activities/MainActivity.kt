@@ -8,6 +8,7 @@ import com.example.moneystream.R
 import com.example.moneystream.presenters.fragments.EventListFragment
 import com.example.moneystream.presenters.fragments.EventListFragment.FragmentListener
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.my_toolbar.*
 import kotlinx.android.synthetic.main.my_toolbar.view.*
 
 class MainActivity : BaseActivity(),FragmentListener {
@@ -35,6 +36,7 @@ class MainActivity : BaseActivity(),FragmentListener {
         this.replaceFragment()
 
         toolbar_activity_main.pageTitle.text = getString(R.string.title_main)
+        image_back.visibility = View.GONE
 
         val fab: View = findViewById(R.id.event_list_fab)
         fab.setOnClickListener { view: View? ->
