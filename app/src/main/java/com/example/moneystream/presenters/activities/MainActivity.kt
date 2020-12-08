@@ -1,17 +1,14 @@
 package com.example.moneystream.presenters.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.ListView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import com.example.moneystream.R
-import com.example.moneystream.presenters.activities.BaseActivity
 import com.example.moneystream.presenters.fragments.EventListFragment
 import com.example.moneystream.presenters.fragments.EventListFragment.FragmentListener
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.my_toolbar.view.*
 
 class MainActivity : BaseActivity(),FragmentListener {
     /*
@@ -36,6 +33,13 @@ class MainActivity : BaseActivity(),FragmentListener {
         setContentView(R.layout.activity_main)
 
         this.replaceFragment()
+
+        toolbar_activity_main.pageTitle.text = getString(R.string.title_main)
+
+        val fab: View = findViewById(R.id.event_list_fab)
+        fab.setOnClickListener { view: View? ->
+            onClickFab()
+        }
     }
 
     private fun replaceFragment() {
@@ -43,6 +47,7 @@ class MainActivity : BaseActivity(),FragmentListener {
         val eventListFragment = EventListFragment()
         transaction.replace(R.id.event_list_container, eventListFragment)
         transaction.commit()
+
     }
 
     override fun onClickFab() {

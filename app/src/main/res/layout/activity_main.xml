@@ -6,10 +6,23 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context=".presenters.activities.MainActivity">
 
+    <include layout="@layout/my_toolbar" android:id="@+id/toolbar_activity_main"/>
+
     <FrameLayout
         android:id="@+id/event_list_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></FrameLayout>
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_activity_main" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/event_list_fab"
+        android:layout_width="@dimen/fab_diameter"
+        android:layout_height="@dimen/fab_diameter"
+        android:layout_gravity="bottom|end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 

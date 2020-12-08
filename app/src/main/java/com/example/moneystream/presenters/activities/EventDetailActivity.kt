@@ -6,12 +6,16 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.Toast
 import com.example.moneystream.R
+import kotlinx.android.synthetic.main.activity_event_detail.*
+import kotlinx.android.synthetic.main.my_toolbar.view.*
 import java.lang.NullPointerException
 
 class EventDetailActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event_detail)
+
+        toolbar_activity_event_detail.pageTitle.text = getString(R.string.title_event_detail)
 
         val image_buttons = listOf<ImageView>(
             findViewById(R.id.detail_member_image),
@@ -36,6 +40,7 @@ class EventDetailActivity : BaseActivity() {
             }
             2 -> {
                 Toast.makeText(this, "Clicked: exit", Toast.LENGTH_SHORT).show()
+                finish()
             }
         }
         startActivity(intent)

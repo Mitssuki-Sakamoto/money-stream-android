@@ -6,4 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".presenters.activities.InviteActivity">
 
+    <include layout="@layout/my_toolbar" android:id="@+id/toolbar_activity_invite"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

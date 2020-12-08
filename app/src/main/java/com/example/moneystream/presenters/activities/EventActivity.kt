@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import android.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
@@ -17,6 +18,8 @@ import androidx.viewpager.widget.ViewPager
 import com.example.moneystream.R
 import com.example.moneystream.presenters.fragments.BaseFragment
 import com.google.android.material.tabs.TabLayout
+import kotlinx.android.synthetic.main.activity_event.*
+import kotlinx.android.synthetic.main.my_toolbar.view.*
 
 private val TAB_TITLES = arrayOf(
     R.string.tab_text_1,
@@ -29,6 +32,8 @@ class EventActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event)
+
+        toolbar_activity_event.pageTitle.text = getString(R.string.event_activity_title)
 
         val toolbarMyaccount: ImageView = findViewById(R.id.toolbar_image_myaccount)
         toolbarMyaccount.setOnClickListener { view ->

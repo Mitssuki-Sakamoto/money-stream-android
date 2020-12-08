@@ -59,11 +59,6 @@ class EventListFragment : BaseFragment() {
             listener?.let(FragmentListener::onClickListItem)
         }
 
-        val fab = fragment.findViewById(R.id.event_list_fab) as FloatingActionButton
-        fab.setOnClickListener { view: View? ->
-            listener?.let(FragmentListener::onClickFab)
-        }
-
         return fragment
     }
 
