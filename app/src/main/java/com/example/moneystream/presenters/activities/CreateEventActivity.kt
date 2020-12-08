@@ -12,11 +12,11 @@ open class CreateEventActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_event)
 
-        val baseFormFragment = OurHistoryFormFragment() //InputHistoryFragment() //BaseFormFragment()
+        //val baseFormFragment = OurHistoryFormFragment() //InputHistoryFragment() //BaseFormFragment()
         // 試作でBaseFormFragmentにactivity_create_eventに載せるformを作っちゃってます．
         // 本来このCreateEventActivityのformはfragmentである必要はないので，BaseFormFragmentの内容はあとでactivity_create_eventに移植し直します．．
-        val fragmentTransaction = supportFragmentManager.beginTransaction()
-        fragmentTransaction.add(R.id.fragment_container, baseFormFragment)
-        fragmentTransaction.commit()
+        //val fragmentTransaction = supportFragmentManager.beginTransaction()
+        //fragmentTransaction.add(R.id.fragment_container, baseFormFragment)
+        //fragmentTransaction.commit()
     }
 }

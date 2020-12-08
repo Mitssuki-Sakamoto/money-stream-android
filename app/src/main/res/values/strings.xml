@@ -19,11 +19,22 @@
     <string name="amount">金額</string>
     <string name="input_amount">金額を記入</string>
     <string name="pay">支払う</string>
+    <string name="to">To</string>
+    <string name="from">From</string>
+    <string name="hint_destination">From</string>
+    <string name="date">日付</string>
+    <string name="bill">請求</string>
     <string-array name="budget_list">
         <item>ホテル代</item>
         <item>高速代</item>
         <item>ホテル代2軒目</item>
         <item>その他</item>
+    </string-array>
+    <string-array name="member_list">
+        <item>メンバーA</item>
+        <item>メンバーB</item>
+        <item>メンバーC</item>
+        <item>予算</item>
     </string-array>
 </resources>
 
