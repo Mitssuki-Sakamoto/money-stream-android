@@ -41,6 +41,7 @@ class EventDetailActivity : BaseActivity() {
             2 -> {
                 Toast.makeText(this, "Clicked: exit", Toast.LENGTH_SHORT).show()
                 finish()
+                return
             }
         }
         startActivity(intent)
