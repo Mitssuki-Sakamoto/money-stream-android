@@ -8,49 +8,49 @@
 
 <!-- TODO: Update blank fragment layout -->
 
-    <LinearLayout
-        android:id="@+id/input_nominal"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_nominal"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        android:background="@android:color/white">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/nominal" />
-        <EditText
-            android:id="@+id/text_start_date"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:hintEnabled="true"
+        app:hintAnimationEnabled="true"
+        android:layout_marginTop="10dp" >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet_nominal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/input_nominal"
-            android:gravity="right" />
-    </LinearLayout>
+            android:hint="@string/nominal"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:textSize="20sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <LinearLayout
-        app:layout_constraintTop_toBottomOf="@+id/input_nominal"
-        android:id="@+id/amount_of_money"
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_amount_of_money"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        android:background="@android:color/white">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/amount" />
-        <EditText
-            android:id="@+id/text_end_date"
+        app:layout_constraintTop_toBottomOf="@id/til_nominal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:hintEnabled="true"
+        app:hintAnimationEnabled="true"
+        android:layout_marginTop="10dp" >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet_amount_of_money"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/input_amount"
-            android:gravity="right" />
-    </LinearLayout>
+            android:hint="@string/amount"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textSize="20sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        app:layout_constraintTop_toBottomOf="@+id/amount_of_money"
+        app:layout_constraintTop_toBottomOf="@+id/til_amount_of_money"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button_pay"
