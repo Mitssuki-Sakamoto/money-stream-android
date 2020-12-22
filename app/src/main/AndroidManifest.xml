@@ -18,7 +18,8 @@
         <activity android:name=".presenters.activities.BillDetailActivity" />
         <activity android:name=".presenters.activities.InputBillActivity"
             android:exported="true" />
-        <activity android:name=".presenters.activities.InputBudgetActivity" />
+        <activity android:name=".presenters.activities.InputBudgetActivity"
+            android:exported="true" />
         <activity android:name=".presenters.activities.EventDetailActivity" />
         <activity android:name=".presenters.activities.EventActivity" />
         <activity android:name=".presenters.activities.MyAccountActivity" />
