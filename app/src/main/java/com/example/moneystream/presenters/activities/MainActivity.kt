@@ -12,22 +12,6 @@ import kotlinx.android.synthetic.main.my_toolbar.*
 import kotlinx.android.synthetic.main.my_toolbar.view.*
 
 class MainActivity : BaseActivity(),FragmentListener {
-    /*
-    private val eventListFragmentListener: FragmentListener = object:FragmentListener{
-        override fun onClickFab() {
-            Toast.makeText(this@MainActivity, "Clicked: fab", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this@MainActivity, CreateEventActivity::class.java)
-            startActivity(intent)
-        }
-
-        override fun onClickListItem() {
-            Toast.makeText(this@MainActivity, "Clicked: List", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this@MainActivity, EventActivity::class.java)
-            startActivity(intent)
-        }
-    }
-
-     */
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
