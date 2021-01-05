@@ -1,11 +1,17 @@
 package com.example.moneystream.presenters.fragments
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.moneystream.R
+import kotlinx.android.synthetic.main.fragment_budget_form.*
+import java.time.Month
+import java.time.Year
+import java.util.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,6 +42,30 @@ class BudgetFormFragment : BaseFormFragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_budget_form, container, false)
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        val calender = Calendar.getInstance()
+        val year = calender.get(Calendar.YEAR)
+        val month = calender.get(Calendar.MONTH) + 1
+        val day = calender.get(Calendar.DAY_OF_MONTH)
+        date.setText("%s-%s-%s".format(year, month, day))
+
+        date.setOnClickListener {
+            val dtp = DatePickerDialog(
+                context!!,
+                DatePickerDialog.OnDateSetListener{ view, y, m, d ->
+                            date.setText("")
+                            date.setText("%s-%s-%s".format(y, m+1, d))
+                            //Toast.makeText(context!!, "日付を選択しました"+y+m+d,Toast.LENGTH_LONG).show()
+                },
+                year,month,day
+            )
+            dtp.show()
+        }
+
     }
 
     companion object {
