@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.moneystream.R
 
 class RecycleAdapter(private val context: Context?,
-                     private val itemClickListener: AdapterView.OnItemClickListener: RecycleHolder.ItemClickListener,
+                     private val itemClickListener: RecycleHolder.ItemClickListener,
                      private val itemList: List<ListItem>)
     :RecyclerView.Adapter<RecycleHolder>() {
 
