@@ -8,7 +8,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.moneystream.R
+import com.example.moneystream.presenters.ListItems
+import com.example.moneystream.presenters.RecycleAdapter
+import com.example.moneystream.presenters.RecycleHolder
 import com.example.moneystream.presenters.activities.CreateEventActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.lang.RuntimeException
@@ -24,10 +29,11 @@ private const val ARG_PARAM2 = "param2"
  * Use the [EventListFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class EventListFragment : BaseFragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+class EventListFragment : BaseFragment(), RecycleHolder.ItemClickListener {
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var myAdapter: RecyclerView.Adapter<*>
+    private lateinit var manager: RecyclerView.LayoutManager
+
     private var listener: FragmentListener? = null
 
     interface FragmentListener {
@@ -37,26 +43,27 @@ class EventListFragment : BaseFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        super.onCreateView(inflater, container, savedInstanceState)
         val fragment = inflater.inflate(R.layout.fragment_event_list, container, false)
 
-        val listView = fragment.findViewById(R.id.event_list_listView) as ListView
-        val dataArray = arrayListOf<String>("熱海", "沖縄", "北海道")
-        val adapter = this.context?.let { ArrayAdapter<String>(it, android.R.layout.simple_list_item_1, dataArray) }
-        listView.adapter = adapter
-        listView.setOnItemClickListener { adapterView, view, position, id ->
+        myAdapter = RecycleAdapter(this.context, this, ListItems())
+        manager = LinearLayoutManager(this.context)
+        recyclerView = fragment.findViewById<RecyclerView>(R.id.event_recycler).apply {
+            setHasFixedSize(true)
+            this.layoutManager = manager
+            this.adapter = myAdapter
+        }
 
-            listener?.let(FragmentListener::onClickListItem)
+        val fab = fragment.findViewById(R.id.event_list_fab) as FloatingActionButton
+        fab.setOnClickListener {
+            listener?.let(FragmentListener::onClickFab)
         }
 
         return fragment
@@ -64,7 +71,7 @@ class EventListFragment : BaseFragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        if (context is FragmentListener) {
+        if (context is EventListFragment.FragmentListener) {
             listener = context
         }
     }
@@ -74,18 +81,11 @@ class EventListFragment : BaseFragment() {
         listener = null
     }
 
-
+    override fun onItemClick(view: View, position: Int) {
+        Toast.makeText(this.context, "click $position event", Toast.LENGTH_SHORT).show()
+    }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment EventListFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             EventListFragment().apply {
@@ -95,4 +95,5 @@ class EventListFragment : BaseFragment() {
                 }
             }
     }
+
 }
