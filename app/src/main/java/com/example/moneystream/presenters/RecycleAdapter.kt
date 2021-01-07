@@ -30,7 +30,7 @@ class RecycleAdapter(private val context: Context?,
         return RecycleHolder(view)
     }
 
-    override fun onBindViewHolder(holder: RecyclerHolder, position: Int) {
+    override fun onBindViewHolder(holder: RecycleHolder, position: Int) {
         holder.let {
             var item = itemList[position]
             it.itemImage.setImageResource(item.icon)
