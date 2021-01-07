@@ -5,10 +5,15 @@
     android:layout_height="match_parent"
     tools:context=".presenters.fragments.EventListFragment">
 
-    <ListView
-        android:id="@+id/event_list_listView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </ListView>
+    <include layout="@layout/fragment_base_list"
+        android:id="@+id/event_recycler"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/event_list_fab"
+        android:layout_width="@dimen/fab_diameter"
+        android:layout_height="@dimen/fab_diameter"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_gravity="bottom|end"/>
 
 </FrameLayout>
