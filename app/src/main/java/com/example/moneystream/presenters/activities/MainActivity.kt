@@ -33,10 +33,10 @@ class MainActivity : BaseActivity(),FragmentListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        this.replaceFragment()
-
         toolbar_activity_main.pageTitle.text = getString(R.string.title_main)
         image_back.visibility = View.GONE
+
+        this.replaceFragment()
 
         val fab: View = findViewById(R.id.event_list_fab)
         fab.setOnClickListener { view: View? ->

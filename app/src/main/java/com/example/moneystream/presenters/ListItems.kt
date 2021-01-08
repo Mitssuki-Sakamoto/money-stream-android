@@ -4,7 +4,7 @@ import com.example.moneystream.R
 
 fun ListItems() : List<ListItem> {
     var ls: MutableList<ListItem> = mutableListOf()
-    for (i in 0..5) {
+    for (i in 0..15) {
         var item = ListItem(
             icon = R.mipmap.ic_launcher_round,
             title = "Title $i",
