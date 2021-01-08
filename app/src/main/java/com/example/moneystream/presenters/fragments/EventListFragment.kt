@@ -61,11 +61,6 @@ class EventListFragment : BaseFragment(), RecycleHolder.ItemClickListener {
             this.adapter = myAdapter
         }
 
-        val fab = fragment.findViewById(R.id.event_list_fab) as FloatingActionButton
-        fab.setOnClickListener {
-            listener?.let(FragmentListener::onClickFab)
-        }
-
         return fragment
     }
 

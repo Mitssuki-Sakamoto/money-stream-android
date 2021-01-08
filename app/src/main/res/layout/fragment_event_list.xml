@@ -14,12 +14,4 @@
         android:layout_height="wrap_content"
         android:background="@color/cardview_dark_background" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/event_list_fab"
-        android:layout_width="@dimen/fab_diameter"
-        android:layout_height="@dimen/fab_diameter"
-        android:layout_marginBottom="@dimen/fab_margin"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_gravity="bottom|end"/>
-
 </FrameLayout>
