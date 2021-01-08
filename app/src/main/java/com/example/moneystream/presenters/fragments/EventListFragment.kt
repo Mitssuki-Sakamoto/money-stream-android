@@ -15,6 +15,7 @@ import com.example.moneystream.presenters.ListItems
 import com.example.moneystream.presenters.RecycleAdapter
 import com.example.moneystream.presenters.RecycleHolder
 import com.example.moneystream.presenters.activities.CreateEventActivity
+import com.example.moneystream.presenters.activities.EventActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.lang.RuntimeException
 
@@ -78,6 +79,8 @@ class EventListFragment : BaseFragment(), RecycleHolder.ItemClickListener {
 
     override fun onItemClick(view: View, position: Int) {
         Toast.makeText(this.context, "click $position event", Toast.LENGTH_SHORT).show()
+        val intent = Intent(context, EventActivity::class.java)
+        startActivity(intent)
     }
 
     companion object {
