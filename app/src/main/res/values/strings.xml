@@ -1,12 +1,14 @@
 <resources>
     <string name="app_name">MoneyStream</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello World</string>
     <string name="fragment_event_list_title">EventListFragment</string>
 
     <string name="title_main">MoneyStream</string>
 
     <string name="event_activity_title">[イベント名]</string>
+
+
     <string name="tab_text_1">請求</string>
     <string name="tab_text_2">ホーム</string>
     <string name="tab_text_3">出納履歴</string>
