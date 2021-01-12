@@ -1,11 +1,28 @@
 <resources>
     <string name="app_name">MoneyStream</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="hello_blank_fragment">Hello World</string>
+    <string name="fragment_event_list_title">EventListFragment</string>
+
+    <string name="title_main">MoneyStream</string>
+
+    <string name="event_activity_title">[イベント名]</string>
+
 
     <string name="tab_text_1">請求</string>
     <string name="tab_text_2">ホーム</string>
     <string name="tab_text_3">出納履歴</string>
     <string name="tab_text_4">入力</string>
+
+    <string name="title_event_member">イベントメンバー</string>
+    <string name="abst_title">概要</string>
+    <string name="date">日程</string>
+    <string name="kanji">幹事</string>
+
+
+    <string name="title_event_detail">イベント詳細</string>
+    <string name="title_invite">メンバー招待</string>
+    <string name="title_my_account">アカウント</string>
+
 </resources>
 
