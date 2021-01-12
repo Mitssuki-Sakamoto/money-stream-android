@@ -19,7 +19,7 @@
     <string name="amount">金額</string>
     <string name="input_amount">金額を記入</string>
     <string name="pay">支払う</string>
-    <string name="to">To</string>
+    <string name="to">請求先</string>
     <string name="from">From</string>
     <string name="hint_destination">From</string>
     <string name="date">日付</string>
