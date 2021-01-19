@@ -25,7 +25,7 @@ class MemberListFragment : BaseListFragment(), MemberHolder.ItemClickListener {
     private lateinit var myAdapter: RecyclerView.Adapter<*>
     private lateinit var manager: RecyclerView.LayoutManager
 
-    private var listener: MemberListFragment.FragmentListener? = null
+    private var listener: FragmentListener? = null
 
     interface FragmentListener {
         fun onClickFab()
@@ -67,8 +67,8 @@ class MemberListFragment : BaseListFragment(), MemberHolder.ItemClickListener {
 
     override fun onItemClick(view: View, position: Int) {
         Toast.makeText(this.context, "clicked", Toast.LENGTH_SHORT).show()
-        val intent = Intent(context, EventActivity::class.java)
-        startActivity(intent)
+        //val intent = Intent(context, EventActivity::class.java)
+        //startActivity(intent)
     }
 
     companion object {

@@ -14,7 +14,7 @@
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/event_list_fab"
+        android:id="@+id/member_list_fab"
         android:layout_width="@dimen/fab_diameter"
         android:layout_height="@dimen/fab_diameter"
         android:layout_gravity="bottom|end"
