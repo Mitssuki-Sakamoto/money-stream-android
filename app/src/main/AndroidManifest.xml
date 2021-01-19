@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".presenters.activities.EventMemberActivity"></activity>
-        <activity android:name=".presenters.activities.EditBudgetActivity" />
+        <activity android:name=".presenters.activities.EditBudgetActivity"
+            android:exported="true" />
         <activity android:name=".presenters.activities.EditOurHistoryActivity" />
         <activity android:name=".presenters.activities.EditMyHistoryActivity" />
         <activity android:name=".presenters.activities.InviteActivity" />
