@@ -19,9 +19,12 @@ class EditMyHistoryActivity : EditHistoryActivity() {
         val year = calender.get(Calendar.YEAR)
         val month = calender.get(Calendar.MONTH) + 1
         val day = calender.get(Calendar.DAY_OF_MONTH)
+        val hour = calender.get(Calendar.HOUR_OF_DAY)
+        val minute = calender.get(Calendar.MINUTE)
         //date.setText("%s-%s-%s".format(year, month, day))
+        //time.setText("%s:%s".format(hour, minute))
 
-        date.setOnClickListener {
+        date.setOnClickListener {// DatePicker
             val dtp = DatePickerDialog(
                 this,
                 DatePickerDialog.OnDateSetListener{ view, y, m, d ->
@@ -34,11 +37,7 @@ class EditMyHistoryActivity : EditHistoryActivity() {
             dtp.show()
         }
 
-        val hour = calender.get(Calendar.HOUR_OF_DAY)
-        val minute = calender.get(Calendar.MINUTE)
-        //time.setText("%s:%s".format(hour, minute))
-
-        time.setOnClickListener {
+        time.setOnClickListener {// TimePicker
             val tpd = TimePickerDialog(
                 this,
                 TimePickerDialog.OnTimeSetListener { view, h, m ->
