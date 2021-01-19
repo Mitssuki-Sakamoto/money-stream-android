@@ -11,7 +11,7 @@ class MemberAdapter(private val context: Context?,
                     private val itemList: List<MemberItem>)
     :RecyclerView.Adapter<MemberHolder>() {
 
-        private var myRecyclerView: RecyclerView? = null
+    private var myRecyclerView: RecyclerView? = null
 
     override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
         super.onAttachedToRecyclerView(recyclerView)
@@ -20,7 +20,7 @@ class MemberAdapter(private val context: Context?,
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MemberHolder {
         val layout = LayoutInflater.from(parent.context)
-        val view = layout.inflate(R.layout.recycler_event_item, parent, false)
+        val view = layout.inflate(R.layout.recycler_member_item, parent, false)
         view.setOnClickListener{
             myRecyclerView?.let {
                 itemClickListener.onItemClick(view, it.getChildAdapterPosition(view))

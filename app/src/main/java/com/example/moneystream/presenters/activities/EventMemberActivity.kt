@@ -16,12 +16,20 @@ class EventMemberActivity : BaseActivity(), MemberListFragment.FragmentListener 
 
         toolbar_activity_event_member.pageTitle.text = getString(R.string.title_event_member)
 
-        MemberListFragment()
+        //MemberListFragment()
+        this.replaceFragment()
 
         val fab: View = findViewById(R.id.member_list_fab)
         fab.setOnClickListener { view: View? ->
             onClickFab()
         }
+    }
+
+    private fun replaceFragment() {
+        val transaction = supportFragmentManager.beginTransaction()
+        val memberListFragment = MemberListFragment()
+        transaction.replace(R.id.member_list_container, memberListFragment)
+        transaction.commit()
     }
 
     override fun onClickFab() {
