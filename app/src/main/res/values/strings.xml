@@ -8,7 +8,7 @@
 
     <string name="event_activity_title">[イベント名]</string>
 
-
+    <string name="create">作成</string>
     <string name="tab_text_1">請求</string>
     <string name="tab_text_2">ホーム</string>
     <string name="tab_text_3">出納履歴</string>
