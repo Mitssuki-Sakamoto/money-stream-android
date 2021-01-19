@@ -4,20 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presenters.activities.MainActivity">
+    tools:context=".presenters.activities.EventMemberActivity">
 
-    <include
-        android:id="@+id/toolbar_activity_main"
-        layout="@layout/my_toolbar" />
+    <include layout="@layout/my_toolbar" android:id="@+id/toolbar_activity_event_member"/>
 
-    <FrameLayout
-        android:id="@+id/event_list_container"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_activity_main" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/event_list_fab"
@@ -27,7 +17,8 @@
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="@dimen/fab_margin"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
 
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

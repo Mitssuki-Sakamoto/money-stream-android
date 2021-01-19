@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" -->
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".presenters.activities.EventActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <include layout="@layout/my_toolbar" android:id="@+id/toolbar_activity_event"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom">
+        <!-- app:layout_behavior="@string/appbar_scrolling_view_behavior">  -->
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="?attr/colorPrimary" />
+
+    </androidx.viewpager.widget.ViewPager>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+<!--</androidx.coordinatorlayout.widget.CoordinatorLayout> -->
