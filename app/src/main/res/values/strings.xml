@@ -50,5 +50,6 @@
     <string name="title_my_account">アカウント</string>
     <string name="add">追加</string>
     <string name="confirm">確定</string>
+    <string name="time">時刻</string>
 </resources>
 

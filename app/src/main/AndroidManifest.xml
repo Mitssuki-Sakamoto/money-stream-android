@@ -13,7 +13,8 @@
         <activity android:name=".presenters.activities.EditBudgetActivity"
             android:exported="true" />
         <activity android:name=".presenters.activities.EditOurHistoryActivity" />
-        <activity android:name=".presenters.activities.EditMyHistoryActivity" />
+        <activity android:name=".presenters.activities.EditMyHistoryActivity"
+            android:exported="true"/>
         <activity android:name=".presenters.activities.InviteActivity" />
         <activity android:name=".presenters.activities.EditBillActivity" />
         <activity android:name=".presenters.activities.EditHistoryActivity" />
