@@ -11,13 +11,10 @@ import android.widget.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moneystream.R
-import com.example.moneystream.presenters.ListItems
-import com.example.moneystream.presenters.RecycleAdapter
-import com.example.moneystream.presenters.RecycleHolder
-import com.example.moneystream.presenters.activities.CreateEventActivity
+import com.example.moneystream.presenters.EventItems
+import com.example.moneystream.presenters.views.EventAdapter
+import com.example.moneystream.presenters.views.EventHolder
 import com.example.moneystream.presenters.activities.EventActivity
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import java.lang.RuntimeException
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -30,7 +27,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [EventListFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class EventListFragment : BaseFragment(), RecycleHolder.ItemClickListener {
+class EventListFragment : BaseFragment(), EventHolder.ItemClickListener {
     private lateinit var recyclerView: RecyclerView
     private lateinit var myAdapter: RecyclerView.Adapter<*>
     private lateinit var manager: RecyclerView.LayoutManager
@@ -54,7 +51,7 @@ class EventListFragment : BaseFragment(), RecycleHolder.ItemClickListener {
         super.onCreateView(inflater, container, savedInstanceState)
         val fragment = inflater.inflate(R.layout.fragment_event_list, container, false)
 
-        myAdapter = RecycleAdapter(this.context, this, ListItems())
+        myAdapter = EventAdapter(this.context, this, EventItems())
         manager = LinearLayoutManager(this.context)
         recyclerView = fragment.findViewById<RecyclerView>(R.id.event_recycler).apply {
             setHasFixedSize(true)

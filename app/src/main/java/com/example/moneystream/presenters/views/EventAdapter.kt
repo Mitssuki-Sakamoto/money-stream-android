@@ -1,16 +1,15 @@
-package com.example.moneystream.presenters
+package com.example.moneystream.presenters.views
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.AdapterView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moneystream.R
 
-class RecycleAdapter(private val context: Context?,
-                     private val itemClickListener: RecycleHolder.ItemClickListener,
-                     private val itemList: List<ListItem>)
-    :RecyclerView.Adapter<RecycleHolder>() {
+class EventAdapter(private val context: Context?,
+                   private val itemClickListener: EventHolder.ItemClickListener,
+                   private val itemList: List<EventItem>)
+    :RecyclerView.Adapter<EventHolder>() {
 
     private var myRecyclerView : RecyclerView? = null
 
@@ -19,7 +18,7 @@ class RecycleAdapter(private val context: Context?,
         myRecyclerView = recyclerView
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecycleHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventHolder {
         val layout = LayoutInflater.from(parent.context)
         val view = layout.inflate(R.layout.recycler_item, parent, false)
         view.setOnClickListener{
@@ -27,10 +26,10 @@ class RecycleAdapter(private val context: Context?,
                 itemClickListener.onItemClick(view, it.getChildAdapterPosition(view))
             }
         }
-        return RecycleHolder(view)
+        return EventHolder(view)
     }
 
-    override fun onBindViewHolder(holder: RecycleHolder, position: Int) {
+    override fun onBindViewHolder(holder: EventHolder, position: Int) {
         holder.let {
             var item = itemList[position]
             it.itemImage.setImageResource(item.icon)

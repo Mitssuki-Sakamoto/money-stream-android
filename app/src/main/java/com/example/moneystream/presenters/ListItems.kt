@@ -1,11 +1,12 @@
 package com.example.moneystream.presenters
 
 import com.example.moneystream.R
+import com.example.moneystream.presenters.views.EventItem
 
-fun ListItems() : List<ListItem> {
-    var ls: MutableList<ListItem> = mutableListOf()
+fun EventItems() : List<EventItem> {
+    var ls: MutableList<EventItem> = mutableListOf()
     for (i in 0..15) {
-        var item = ListItem(
+        var item = EventItem(
             icon = R.mipmap.ic_launcher_round,
             title = "Title $i",
             detail = "detail in this area."
@@ -14,3 +15,4 @@ fun ListItems() : List<ListItem> {
     }
     return ls
 }
+
