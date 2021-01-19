@@ -11,7 +11,7 @@ class EventHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun onItemClick(view: View, position: Int)
     }
 
-    var itemImage: ImageView = view.findViewById(R.id.item_image)
-    var itemTitle: TextView = view.findViewById(R.id.item_title)
-    var itemDetail: TextView = view.findViewById(R.id.item_detail)
+    var itemImage: ImageView = view.findViewById(R.id.event_item_image)
+    var itemTitle: TextView = view.findViewById(R.id.event_item_title)
+    var itemDetail: TextView = view.findViewById(R.id.event_item_detail)
 }

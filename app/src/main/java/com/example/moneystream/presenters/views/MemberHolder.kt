@@ -11,6 +11,6 @@ class MemberHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun onItemClick(view: View, position: Int)
     }
 
-    var itemImage: ImageView = view.findViewById(R.id.item_image)
-    var itemName: TextView = view.findViewById(R.id.item_title)
+    var itemImage: ImageView = view.findViewById(R.id.member_item_image)
+    var itemName: TextView = view.findViewById(R.id.member_item_name)
 }
