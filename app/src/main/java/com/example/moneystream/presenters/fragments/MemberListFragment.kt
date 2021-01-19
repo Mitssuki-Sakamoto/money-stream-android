@@ -1,9 +1,7 @@
 package com.example.moneystream.presenters.fragments
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moneystream.R
 import com.example.moneystream.presenters.MemberItems
-import com.example.moneystream.presenters.activities.EventActivity
 import com.example.moneystream.presenters.views.MemberAdapter
 import com.example.moneystream.presenters.views.MemberHolder
 
@@ -20,7 +17,7 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 
-class MemberListFragment : BaseListFragment(), MemberHolder.ItemClickListener {
+open class MemberListFragment : BaseListFragment(), MemberHolder.ItemClickListener {
     private lateinit var recyclerView: RecyclerView
     private lateinit var myAdapter: RecyclerView.Adapter<*>
     private lateinit var manager: RecyclerView.LayoutManager

@@ -16,7 +16,7 @@ class EventMemberActivity : BaseActivity(), MemberListFragment.FragmentListener 
 
         toolbar_activity_event_member.pageTitle.text = getString(R.string.title_event_member)
 
-        val member_fragment = MemberListFragment()
+        MemberListFragment()
 
         val fab: View = findViewById(R.id.member_list_fab)
         fab.setOnClickListener { view: View? ->
