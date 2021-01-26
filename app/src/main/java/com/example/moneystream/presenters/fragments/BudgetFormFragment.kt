@@ -59,7 +59,6 @@ class BudgetFormFragment : BaseFormFragment() {
                 DatePickerDialog.OnDateSetListener{ view, y, m, d ->
                             date.setText("")
                             date.setText("%s-%s-%s".format(y, m+1, d))
-                            //Toast.makeText(context!!, "日付を選択しました"+y+m+d,Toast.LENGTH_LONG).show()
                 },
                 year,month,day
             )
