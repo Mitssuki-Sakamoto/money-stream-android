@@ -59,7 +59,7 @@ class EventFormFragment : BaseFormFragment() {
                 context!!,
                 DatePickerDialog.OnDateSetListener{ view, y, m, d ->
                     start_date.setText("")
-                    start_date.setText("%s-%s-%s".format(y, m+1, d))
+                    start_date.setText(getString(R.string.date_format).format(y, m+1, d))
                     //Toast.makeText(context!!, "日付を選択しました"+y+m+d,Toast.LENGTH_LONG).show()
                 },
                 year,month,day
@@ -71,7 +71,7 @@ class EventFormFragment : BaseFormFragment() {
                 context!!,
                 DatePickerDialog.OnDateSetListener{ view, y, m, d ->
                     end_date.setText("")
-                    end_date.setText("%s-%s-%s".format(y, m+1, d))
+                    end_date.setText(getString(R.string.date_format).format(y, m+1, d))
                     //Toast.makeText(context!!, "日付を選択しました"+y+m+d,Toast.LENGTH_LONG).show()
                 },
                 year,month,day

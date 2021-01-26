@@ -29,7 +29,7 @@ class EditOurHistoryActivity : EditHistoryActivity() {
                 this,
                 DatePickerDialog.OnDateSetListener{ view, y, m, d ->
                     date.setText("")
-                    date.setText("%s-%s-%s".format(y, m+1, d))
+                    date.setText(getString(R.string.date_format).format(y, m+1, d))
                     //Toast.makeText(context!!, "日付を選択しました"+y+m+d,Toast.LENGTH_LONG).show()
                 },
                 year,month,day
@@ -42,7 +42,7 @@ class EditOurHistoryActivity : EditHistoryActivity() {
                 this,
                 TimePickerDialog.OnTimeSetListener { view, h, m ->
                     time.setText("")
-                    time.setText("%s:%s".format(h, m))
+                    time.setText(getString(R.string.time_format).format(h, m))
                 },
                 hour,minute,true
             )

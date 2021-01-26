@@ -51,14 +51,14 @@ class BudgetFormFragment : BaseFormFragment() {
         val year = calender.get(Calendar.YEAR)
         val month = calender.get(Calendar.MONTH) + 1
         val day = calender.get(Calendar.DAY_OF_MONTH)
-        date.setText("%s-%s-%s".format(year, month, day))
+        date.setText(getString(R.string.date_format).format(year, month, day))
 
         date.setOnClickListener {
             val dtp = DatePickerDialog(
                 context!!,
                 DatePickerDialog.OnDateSetListener{ view, y, m, d ->
                             date.setText("")
-                            date.setText("%s-%s-%s".format(y, m+1, d))
+                            date.setText(getString(R.string.date_format).format(y, m+1, d))
                 },
                 year,month,day
             )
