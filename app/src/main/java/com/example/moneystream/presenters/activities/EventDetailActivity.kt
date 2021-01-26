@@ -22,28 +22,26 @@ class EventDetailActivity : BaseActivity() {
             findViewById(R.id.detail_invite_image),
             findViewById(R.id.detail_exit_image)
         )
-        image_buttons[0].setOnClickListener { view -> onClickImage(0) }
-        image_buttons[1].setOnClickListener { view -> onClickImage(1) }
-        image_buttons[2].setOnClickListener { view -> onClickImage(2) }
+        image_buttons[0].setOnClickListener { view -> onClickMember() }
+        image_buttons[1].setOnClickListener { view -> onClickInvite() }
+        image_buttons[2].setOnClickListener { view -> onClickExit() }
     }
 
-    fun onClickImage(i: Int) {
-        var intent: Intent = Intent()
-        when (i) {
-            0 -> {
-                Toast.makeText(this, "Clicked: member", Toast.LENGTH_SHORT).show()
-                intent = Intent(this, EventMemberActivity::class.java)
-            }
-            1 -> {
-                Toast.makeText(this, "Clicked: invite", Toast.LENGTH_SHORT).show()
-                intent = Intent(this, InviteActivity::class.java)
-            }
-            2 -> {
-                Toast.makeText(this, "Clicked: exit", Toast.LENGTH_SHORT).show()
-                finish()
-                return
-            }
-        }
+    fun onClickMember() {
+        Toast.makeText(this, "Clicked: member", Toast.LENGTH_SHORT).show()
+        intent = Intent(this, EventMemberActivity::class.java)
         startActivity(intent)
     }
+
+    fun onClickInvite() {
+        Toast.makeText(this, "Clicked: invite", Toast.LENGTH_SHORT).show()
+        intent = Intent(this, InviteActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun onClickExit() {
+        Toast.makeText(this, "Clicked: exit", Toast.LENGTH_SHORT).show()
+        finish()
+    }
+
 }
