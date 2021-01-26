@@ -1,6 +1,7 @@
 package com.example.moneystream.presenters.activities
 
 import android.content.Intent
+import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -17,14 +18,15 @@ class EventDetailActivity : BaseActivity() {
 
         toolbar_activity_event_detail.pageTitle.text = getString(R.string.title_event_detail)
 
-        val image_buttons = listOf<ImageView>(
-            findViewById(R.id.detail_member_image),
-            findViewById(R.id.detail_invite_image),
-            findViewById(R.id.detail_exit_image)
-        )
-        image_buttons[0].setOnClickListener { view -> onClickMember() }
-        image_buttons[1].setOnClickListener { view -> onClickInvite() }
-        image_buttons[2].setOnClickListener { view -> onClickExit() }
+        val member_button: ImageView = findViewById(R.id.detail_member_image)
+        member_button.setOnClickListener { onClickMember() }
+
+        val invite_button: ImageView = findViewById(R.id.detail_invite_image)
+        invite_button.setOnClickListener { onClickInvite() }
+
+        val exit_button: ImageView = findViewById(R.id.detail_exit_image)
+        exit_button.setOnClickListener{ onClickExit()}
+
     }
 
     private fun onClickMember() {
