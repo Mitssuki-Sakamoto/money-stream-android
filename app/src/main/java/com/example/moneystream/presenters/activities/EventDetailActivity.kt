@@ -27,19 +27,19 @@ class EventDetailActivity : BaseActivity() {
         image_buttons[2].setOnClickListener { view -> onClickExit() }
     }
 
-    fun onClickMember() {
+    private fun onClickMember() {
         Toast.makeText(this, "Clicked: member", Toast.LENGTH_SHORT).show()
         intent = Intent(this, EventMemberActivity::class.java)
         startActivity(intent)
     }
 
-    fun onClickInvite() {
+    private fun onClickInvite() {
         Toast.makeText(this, "Clicked: invite", Toast.LENGTH_SHORT).show()
         intent = Intent(this, InviteActivity::class.java)
         startActivity(intent)
     }
 
-    fun onClickExit() {
+    private fun onClickExit() {
         Toast.makeText(this, "Clicked: exit", Toast.LENGTH_SHORT).show()
         finish()
     }
