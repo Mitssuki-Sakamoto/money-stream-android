@@ -22,6 +22,7 @@ import kotlinx.android.synthetic.main.my_toolbar.view.*
 
 private val TAB_TITLES = arrayOf(
     R.string.tab_text1,
+    R.string.tab_text2,
     R.string.tab_text3,
     R.string.tab_text4,
     R.string.tab_text5
@@ -77,7 +78,7 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
     }
 
     override fun getCount(): Int {
-        return 4
+        return TAB_TITLES.size
     }
 
 }
