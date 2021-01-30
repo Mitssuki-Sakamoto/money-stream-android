@@ -2,13 +2,16 @@ package com.example.moneystream.presenters.activities
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
@@ -19,6 +22,7 @@ import com.example.moneystream.presenters.fragments.BaseFragment
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_event.*
 import kotlinx.android.synthetic.main.my_toolbar.view.*
+import kotlinx.android.synthetic.main.tab_layout.view.*
 
 private val TAB_TITLES = arrayOf(
     R.string.tab_text1,
@@ -27,7 +31,16 @@ private val TAB_TITLES = arrayOf(
     R.string.tab_text4,
     R.string.tab_text5
 )
-private val TAB_MAIN = 2
+private val TAB_ICONS = arrayOf(
+    //TODO: Change icon later
+    R.drawable.ic_launcher_foreground,
+    R.drawable.ic_launcher_foreground,
+    R.drawable.ic_home_black_18dp,
+    R.drawable.ic_launcher_foreground,
+    R.drawable.ic_launcher_foreground
+)
+
+private const val TAB_MAIN = 2
 
 class EventActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,10 +61,13 @@ class EventActivity : BaseActivity() {
 
         val viewPager: ViewPager = findViewById(R.id.view_pager)
         viewPager.adapter = SectionsPagerAdapter(this, supportFragmentManager)
-        viewPager.setCurrentItem(TAB_MAIN)
+        viewPager.currentItem = TAB_MAIN
+
         val tabs: TabLayout = findViewById(R.id.tabs)
         tabs.setupWithViewPager(viewPager)
+        createTabLayout(tabs)
     }
+
     private fun onClickToolBar(view: View) {
         when(view.id) {
             R.id.image_myaccount -> {
@@ -64,6 +80,17 @@ class EventActivity : BaseActivity() {
                 val intent = Intent(this, EventDetailActivity::class.java)
                 startActivity(intent)
             }
+        }
+    }
+
+    private fun createTabLayout(tabs: TabLayout) {
+        for (i in 0..TAB_TITLES.size) {
+            //var tab = findViewById<View>(R.id.customTab).apply {
+            //    this.findViewById<ImageView>(R.id.tabIcon).setImageResource(TAB_ICONS[i])
+            //   this.findViewById<TextView>(R.id.tabText).setText(TAB_TITLES[i])
+            //}
+            //tabs.getTabAt(i)?.setCustomView(tab)
+            tabs.getTabAt(i)?.setIcon(TAB_ICONS[i])
         }
     }
 }
