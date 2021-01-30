@@ -9,10 +9,11 @@
     <string name="event_activity_title">[イベント名]</string>
 
 
-    <string name="tab_text_1">請求</string>
-    <string name="tab_text_2">ホーム</string>
-    <string name="tab_text_3">出納履歴</string>
-    <string name="tab_text_4">入力</string>
+    <string name="tab_text1">請求</string>
+    <string name="tab_text2">予算</string>
+    <string name="tab_text3">ホーム</string>
+    <string name="tab_text4">出納履歴</string>
+    <string name="tab_text5">入力</string>
 
     <string name="title_event_member">イベントメンバー</string>
     <string name="abst_title">概要</string>

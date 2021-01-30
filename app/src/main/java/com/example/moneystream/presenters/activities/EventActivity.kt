@@ -21,10 +21,10 @@ import kotlinx.android.synthetic.main.activity_event.*
 import kotlinx.android.synthetic.main.my_toolbar.view.*
 
 private val TAB_TITLES = arrayOf(
-    R.string.tab_text_1,
-    R.string.tab_text_2,
-    R.string.tab_text_3,
-    R.string.tab_text_4
+    R.string.tab_text1,
+    R.string.tab_text3,
+    R.string.tab_text4,
+    R.string.tab_text5
 )
 
 class EventActivity : BaseActivity() {
