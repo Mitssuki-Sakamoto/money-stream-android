@@ -27,7 +27,7 @@ private val TAB_TITLES = arrayOf(
     R.string.tab_text4,
     R.string.tab_text5
 )
-private val TAB_MAIN = 3
+private val TAB_MAIN = 2
 
 class EventActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,6 +48,7 @@ class EventActivity : BaseActivity() {
 
         val viewPager: ViewPager = findViewById(R.id.view_pager)
         viewPager.adapter = SectionsPagerAdapter(this, supportFragmentManager)
+        viewPager.setCurrentItem(TAB_MAIN)
         val tabs: TabLayout = findViewById(R.id.tabs)
         tabs.setupWithViewPager(viewPager)
     }
