@@ -22,7 +22,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:background="?attr/colorPrimary"
-            app:tabTextAppearance="@style/TabText" />
+            app:tabTextAppearance="@style/TabText"
+            app:tabSelectedTextColor="@color/colorAccent" />
+        <!-- https://qiita.com/ryohey/items/df96d3f7e56756962380 -->
 
     </androidx.viewpager.widget.ViewPager>
 
