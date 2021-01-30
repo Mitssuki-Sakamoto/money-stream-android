@@ -27,6 +27,7 @@ private val TAB_TITLES = arrayOf(
     R.string.tab_text4,
     R.string.tab_text5
 )
+private val TAB_MAIN = 3
 
 class EventActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -139,3 +140,4 @@ class PageViewModel : ViewModel() {
 }
 
 
+// https://blog.codecamp.jp/android-app-tab
