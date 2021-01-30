@@ -36,7 +36,7 @@ private val TAB_ICONS = arrayOf(
     R.drawable.ic_launcher_foreground,
     R.drawable.ic_launcher_foreground,
     R.drawable.ic_home_black_18dp,
-    R.drawable.ic_launcher_foreground,
+    R.drawable.ic_groups_black_24dp,
     R.drawable.ic_launcher_foreground
 )
 
