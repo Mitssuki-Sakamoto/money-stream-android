@@ -1,17 +1,14 @@
 package com.example.moneystream.presenters.fragments
 
 import android.app.DatePickerDialog
-import android.app.TimePickerDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.moneystream.R
-import kotlinx.android.synthetic.main.activity_edit_my_history.*
-import kotlinx.android.synthetic.main.fragment_budget_form.*
-import kotlinx.android.synthetic.main.fragment_budget_form.date
-import kotlinx.android.synthetic.main.fragment_event_form.*
+import kotlinx.android.synthetic.main.fragment_event_form.start_date
+import kotlinx.android.synthetic.main.fragment_event_form.end_date
 import java.util.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -52,7 +49,6 @@ class EventFormFragment : BaseFormFragment() {
         val year = calender.get(Calendar.YEAR)
         val month = calender.get(Calendar.MONTH) + 1
         val day = calender.get(Calendar.DAY_OF_MONTH)
-        //date.setText("%s-%s-%s".format(year, month, day))
 
         start_date.setOnClickListener {
             val dtp = DatePickerDialog(
@@ -60,7 +56,6 @@ class EventFormFragment : BaseFormFragment() {
                 DatePickerDialog.OnDateSetListener{ view, y, m, d ->
                     start_date.setText("")
                     start_date.setText(getString(R.string.date_format).format(y, m+1, d))
-                    //Toast.makeText(context!!, "日付を選択しました"+y+m+d,Toast.LENGTH_LONG).show()
                 },
                 year,month,day
             )
@@ -72,7 +67,6 @@ class EventFormFragment : BaseFormFragment() {
                 DatePickerDialog.OnDateSetListener{ view, y, m, d ->
                     end_date.setText("")
                     end_date.setText(getString(R.string.date_format).format(y, m+1, d))
-                    //Toast.makeText(context!!, "日付を選択しました"+y+m+d,Toast.LENGTH_LONG).show()
                 },
                 year,month,day
             )

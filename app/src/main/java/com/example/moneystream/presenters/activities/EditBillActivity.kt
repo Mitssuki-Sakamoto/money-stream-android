@@ -1,6 +1,5 @@
 package com.example.moneystream.presenters.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.moneystream.R
 

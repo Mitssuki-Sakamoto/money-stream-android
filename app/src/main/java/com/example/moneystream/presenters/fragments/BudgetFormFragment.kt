@@ -6,12 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import com.example.moneystream.R
-import kotlinx.android.synthetic.main.fragment_budget_form.*
-import java.time.Month
-import java.time.Year
-import java.util.*
+import kotlinx.android.synthetic.main.fragment_budget_form.date
+import java.util.Calendar
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

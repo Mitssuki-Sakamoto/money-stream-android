@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.moneystream.R
 import com.example.moneystream.presenters.fragments.BudgetFormFragment
-import com.example.moneystream.presenters.fragments.MyHistoryFormFragment
 
 class InputBudgetActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
