@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.moneystream.R
-import kotlinx.android.synthetic.main.fragment_budget_form.date
+import kotlinx.android.synthetic.main.fragment_budget_form.tiet_date
 import java.util.Calendar
 
 // TODO: Rename parameter arguments, choose names that match
@@ -48,14 +48,14 @@ class BudgetFormFragment : BaseFormFragment() {
         val year = calender.get(Calendar.YEAR)
         val month = calender.get(Calendar.MONTH) + 1
         val day = calender.get(Calendar.DAY_OF_MONTH)
-        date.setText(getString(R.string.date_format).format(year, month, day))
+        tiet_date.setText(getString(R.string.date_format).format(year, month, day))
 
-        date.setOnClickListener {
+        tiet_date.setOnClickListener {
             val dtp = DatePickerDialog(
                 context!!,
                 DatePickerDialog.OnDateSetListener{ view, y, m, d ->
-                            date.setText("")
-                            date.setText(getString(R.string.date_format).format(y, m+1, d))
+                            tiet_date.setText("")
+                            tiet_date.setText(getString(R.string.date_format).format(y, m+1, d))
                 },
                 year,month,day
             )
