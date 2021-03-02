@@ -1,14 +1,12 @@
 package com.example.moneystream.presenters.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.Toast
 import com.example.moneystream.R
 import kotlinx.android.synthetic.main.activity_event_detail.*
 import kotlinx.android.synthetic.main.my_toolbar.view.*
-import java.lang.NullPointerException
 
 class EventDetailActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -13,9 +13,9 @@
     <dimen name="toolbar_title">20sp</dimen>
 
     <dimen name="event_detail_icons_edge">80dp</dimen>
-
     <dimen name="til_width_0">0dp</dimen>
     <dimen name="marginTop_of_form_parts">10dp</dimen>
     <dimen name="marginBottom_of_form_last_part">5dp</dimen>
     <dimen name="form_EditText_size">20sp</dimen>
+    <dimen name="tab_text_size">12dp</dimen>
 </resources>
