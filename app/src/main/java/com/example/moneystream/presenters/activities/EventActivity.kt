@@ -28,8 +28,8 @@ private val TAB_TITLES = arrayOf(
     R.string.tab_text1,
     R.string.tab_text2,
     R.string.tab_text3,
-    R.string.tab_text4,
-    R.string.tab_text5
+    R.string.tab_text4
+    //R.string.tab_text5
 )
 private val TAB_ICONS = arrayOf(
     //TODO: Change icon later
