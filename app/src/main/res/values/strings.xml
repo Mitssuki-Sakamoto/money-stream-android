@@ -12,6 +12,7 @@
     <string name="tab_text2">ホーム</string>
     <string name="tab_text3">出納履歴</string>
     <string name="tab_text4">入力</string>
+    <string name='tab_text5'>出納履歴</string>
     <string name="event_name">イベント名</string>
     <string name="explanation">説明</string>
     <string name="start_date">開始日</string>
